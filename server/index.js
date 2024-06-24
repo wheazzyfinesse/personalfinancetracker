@@ -11,7 +11,7 @@ const MONGO_URI =
 	"mongodb+srv://wheazzyfinesse:mydb1@mydb.5opdskt.mongodb.net/?retryWrites=true&w=majority&appName=mydb";
 
 app.use("/financial-records", financialrecordsroute);
-app.get("/finance", (req, res) => {
+app.get("/", (req, res) => {
 	res.send("Hello World!");
 });
 mongoose
