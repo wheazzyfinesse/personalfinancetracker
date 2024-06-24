@@ -8,6 +8,7 @@ const FinancialRecordForm = () => {
     const [category, setCategory] = useState<string>("")
     const [paymentMethod, setPaymentMethod] = useState<string>("")
     const { user } = useUser()
+
     const { addRecord } = useFinancialRecords()
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {

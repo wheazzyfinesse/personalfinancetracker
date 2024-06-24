@@ -3,7 +3,7 @@ import { createContext, useContext, useEffect, useState } from "react";
 
 export interface FinancialRecord {
   _id?: string;
-  userId: string;
+  userId: string | undefined;
   date: Date;
   description: string;
   amount: number;
