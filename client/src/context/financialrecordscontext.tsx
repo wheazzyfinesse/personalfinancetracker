@@ -33,7 +33,7 @@ export const FinancialRecordsProvider = ({
   const fetchRecords = async () => {
     if (!user) return;
     const response = await fetch(
-      `http://localhost:3000/financial-records/getUserRecords/${user.id}`
+      `https://personalfinancetrackerapi.vercel.app/financial-records/getUserRecords/${user.id}`
     );
 
     if (response.ok) {
@@ -48,7 +48,7 @@ export const FinancialRecordsProvider = ({
 
   const addRecord = async (record: FinancialRecord) => {
     if (!user) return;
-    const response = await fetch("http://localhost:3000/financial-records", {
+    const response = await fetch("https://personalfinancetrackerapi.vercel.app/financial-records", {
       method: "POST",
       body: JSON.stringify(record),
       headers: {
@@ -70,7 +70,7 @@ export const FinancialRecordsProvider = ({
     if (!user) return;
     console.log(newRecord)
     const response = await fetch(
-      `http://localhost:3000/financial-records/${user.id}`,
+      `https://personalfinancetrackerapi.vercel.app/financial-records/${user.id}`,
       {
         method: "PUT",
         body: JSON.stringify(newRecord),
@@ -102,7 +102,7 @@ export const FinancialRecordsProvider = ({
   const deleteRecord = async (id: string) => {
     console.log(id)
     const response = await fetch(
-      `http://localhost:3000/financial-records/${id}`,
+      `https://personalfinancetrackerapi.vercel.app/financial-records/${id}`,
       {
         method: "DELETE",
       }
