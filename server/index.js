@@ -13,7 +13,7 @@ const MONGO_URI =
 app.use("/financial-records", financialrecordsroute);
 app.get("/", (req,res)=>{
 	res.send("welcome")
-}
+});
 
 mongoose
 	.connect(MONGO_URI)
